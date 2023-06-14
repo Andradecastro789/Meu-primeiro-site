@@ -1,3 +1,94 @@
+function calcularArea() {
+  var comprimento = parseFloat(document.getElementById('comprimento').value);
+  var largura = parseFloat(document.getElementById('largura').value);
+
+  var area = comprimento * largura;
+
+  document.getElementById('resultado').innerHTML = "Área do terreno: " + area;
+}
+
+
+
+function calculateShoes() {
+    var numHorses = parseInt(document.getElementById('numHorses').value);
+    var numShoes = numHorses * 4; // Cada cavalo precisa de 4 ferraduras
+
+    document.getElementById('result').innerHTML = "Total de Ferraduras Necessárias: " + numShoes;
+}
+
+function calcularVendas() {
+  var quantidadePaes = parseInt(document.getElementById('quantidadePaes').value);
+  var quantidadeBroas = parseInt(document.getElementById('quantidadeBroas').value);
+
+  var valorPaes = quantidadePaes * 0.12;
+  var valorBroas = quantidadeBroas * 1.50;
+
+  var totalArrecadado = valorPaes + valorBroas;
+  var poupanca = totalArrecadado * 0.1;
+
+  document.getElementById('resultadoArrecadado').innerHTML = "Valor arrecadado: R$" + totalArrecadado.toFixed(2);
+  document.getElementById('resultadoPoupanca').innerHTML = "Valor a guardar na poupança: R$" + poupanca.toFixed(2);
+}
+function calcularDiasDeVida() {
+  var nome = document.getElementById('nome').value;
+  var idade = parseInt(document.getElementById('idade').value);
+
+  var diasDeVida = idade * 365;
+
+  document.getElementById('resultado').innerHTML = nome.toUpperCase() + ", você já viveu " + diasDeVida + " dias.";
+}
+
+
+  function calculate() {
+    var price = parseFloat(document.getElementById("price").value);
+    var payment = parseFloat(document.getElementById("payment").value);
+
+    var liters = payment / price;
+
+    document.getElementById("result").innerHTML = "You can fill your tank with " + liters.toFixed(2) + " liters of gasoline.";
+  }
+ function calcularValor() {
+    var peso = parseFloat(document.getElementById("peso").value);
+    var valorPagar = peso * 12;
+    document.getElementById("valorPagar").innerHTML = "Valor a pagar: R$" + valorPagar.toFixed(2);
+  }
+function calcularDias() {
+  var dia = parseInt(document.getElementById('dia').value);
+  var mes = parseInt(document.getElementById('mes').value);
+
+  var diasPassados = (mes - 1) * 30 + dia;
+
+  document.getElementById('resultado').innerHTML = "Dias passados desde o início do ano: " + diasPassados;
+}
+document.getElementById('resultado').innerHTML = "Dias passados desde o início do ano: " + diasPassados;
+}
+function calcularValor() {
+  var quantidadePequenas = parseInt(document.getElementById('quantidadePequenas').value);
+  var quantidadeMedias = parseInt(document.getElementById('quantidadeMedias').value);
+  var quantidadeGrandes = parseInt(document.getElementById('quantidadeGrandes').value);
+
+  var valorArrecadado = quantidadePequenas * 10 + quantidadeMedias * 12 + quantidadeGrandes * 15;
+
+  document.getElementById('resultado').innerHTML = "Valor arrecadado: R$" + valorArrecadado;
+}
+function calcularDistancia() {
+  var x1 = parseFloat(document.getElementById('x1').value);
+  var y1 = parseFloat(document.getElementById('y1').value);
+  var x2 = parseFloat(document.getElementById('x2').value);
+  var y2 = parseFloat(document.getElementById('y2').value);
+
+  var distancia = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+
+  document.getElementById('resultado').innerHTML = "Distância entre os pontos: " + distancia;
+}
+function converterTempo() {
+  var totalDias = parseInt(document.getElementById("totalDias").value);
+  
+  var anos = Math.floor(totalDias / 365);
+  var meses = Math.floor((totalDias % 365) / 30);
+  var dias = (totalDias % 365) % 30;
+  
+  document.getElementById("anos").innerHTML = anos;
   document.getElementById("meses").innerHTML = meses;
   document.getElementById("dias").innerHTML = dias;
   
@@ -74,4 +165,3 @@ function dividirConta() {
                                                "André: R$ " + valorPorPessoa.toFixed(2) + "<br>" +
                                                "Felipe: R$ " + (valorPorPessoa + resto).toFixed(2);
 }
-
